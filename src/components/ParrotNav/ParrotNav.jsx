@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../assets/Parrot Security/parrot_logo.jpeg"
+import logo from "../../assets/parrot_imgs/parrot_logo.jpeg"
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { useParrotNav } from '../../hooks/useParrotNav'
 import {useIsOnline} from 'react-use-is-online'
@@ -8,7 +8,7 @@ export default function ParrotNav() {
     const {isHidden , showList , setIsHidden , hideList  , isToggled , toggleUp , toggleDown} = useParrotNav();
     const {isOnline , isOffline} = useIsOnline();
     return (
-        <nav className=' bg-transparent flex justify-between items-center responsive py-5' >
+        <nav className=' bg-transparent flex justify-between items-center responsive py-5 font-museo' >
             <div className="flex flex-col lg:flex-row lg:justify-evenly  w-full lg:items-center ">
             <div className="brand me-auto relative">
                 <img src={logo} className='w-full h-full rounded-full' />
@@ -16,8 +16,8 @@ export default function ParrotNav() {
                     
                 </div> : ""}
             </div>
-            <div className={`links  overflow-hidden lg:overflow-visible  lg:mx-auto ${isToggled ? 'h-60 lg:h-fit' : 'h-0'} transition-all duration-700` } >
-                <ul className='text-white'>
+            <div className={`links lg:mt-0  overflow-hidden lg:overflow-visible  lg:mx-auto ${isToggled ? 'h-60 lg:h-fit  mt-4' : 'h-0'} transition-all duration-700` } >
+                <ul className='text-white  '>
                     <li><span>Community</span></li>
                     <li><span>Documentation</span></li>
                     <li className='relative'>
@@ -42,8 +42,8 @@ export default function ParrotNav() {
                 <button className='nav-btn hidden lg:block'>Download</button>
                 {
                     isToggled ?
-                    <X onClick={toggleUp} className='lg:hidden' size={40}/>  :
-                    <Menu onClick={toggleDown} className='lg:hidden' size={40} />
+                    <X onClick={toggleUp} className='lg:hidden' size={40} color='white'/>  :
+                    <Menu onClick={toggleDown} className='lg:hidden' size={40} color='white' />
                 }
             </div>
             

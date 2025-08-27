@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
+
+@font-face {
+  font-family: 'museo sans';
+  src: local("main"), url("fonts/LeoSansBold-6mE6.otf"), format("truetype");
+}
+
 @theme {
-  --color-frozen:rgb(103,239,254);
+  --color-frozen: rgb(103, 239, 254);
+  --font-museo: 'museo sans'
 }
 
 @layer components {
   .brand {
-    @apply w-15 h-15 ;
+    @apply w-15 h-15;
   }
+
   .responsive {
     @apply w-full lg:w-3/4 mx-auto;
   }
-  .links ul:first-child{
-    @apply flex flex-col gap-5 lg:flex-row lg:gap-8 lg:items-center ;
+
+  .links ul:first-child {
+    @apply flex flex-col gap-5 lg:flex-row lg:gap-8 lg:items-center text-sm;
   }
+
   .hidden-links {
-    @apply flex flex-col gap-2  bg-slate-700 text-white rounded-xl w-full py-3 ;
+    @apply flex flex-col gap-2 bg-slate-700 text-white rounded-xl w-full py-3;
   }
+
   .links-hover {
-    @apply font-sans font-semibold hover:bg-slate-400/60 transition-all  w-full block  text-center hover:text-sky-500;
+    @apply font-sans font-semibold hover:bg-slate-400/60 transition-all w-full block text-center hover:text-sky-500;
   }
+
   .nav-btn {
-    @apply bg-frozen text-black py-3 px-8 rounded-[30px] ;
+    @apply bg-frozen text-black py-3 px-8 rounded-[30px];
   }
+
+  .font-museo {
+    font-family: 'museo sans';
+  }
+
+  .bg-image {
+    background-image: linear-gradient(rgba(25, 25, 112, .9), rgba(25, 25, 112, .9)), url("./assets/parrot_imgs/parrot_langing.jpg");
+    background-position: top center;
+    @apply bg-no-repeat ;
+  }
+
+  .transparent-btn {
+    @apply bg-transparent border-1 border-white text-white transition-colors hover:bg-frozen/20 hover:border-frozen;
+  }
+
+  .splide__slide img {
+    width: 90%;
+    height: auto;
+    margin-inline: auto;
+    @apply rounded-xl;
+  }
+ 
+
 }
