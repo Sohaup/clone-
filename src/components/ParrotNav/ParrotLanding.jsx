@@ -6,7 +6,7 @@ import ParrotCard from "./ParrotCard";
 export default function ParrotLanding() {
     const {typeRef} = useParrotLanding();    
     return (
-        <div className='bg-image  py-8 '>
+        <div className=' py-8 '>
             <div className="title flex flex-col items-center text-white py-8 ">
                 <h1 className="text-6xl flex flex-col gap-3 items-center">
                     <span className="text-frozen">ParrotSEC</span>
@@ -25,9 +25,9 @@ export default function ParrotLanding() {
                         Get started
                      </button>
                 </div>
-                <button className="nav-btn transparent-btn rounded-2xl lg:w-1/4">released on 2020</button>
+                <button className="nav-btn transparent-btn rounded-2xl lg:w-1/4">Released on 2020</button>
             </div>
-            <ParrotCard/>
+            <ParrotCard/>           
         </div>
     )
 }
