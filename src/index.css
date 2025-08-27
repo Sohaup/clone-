@@ -12,13 +12,13 @@
     @apply w-full lg:w-3/4 mx-auto;
   }
   .links ul:first-child{
-    @apply flex flex-col gap-5 lg:flex-row lg:gap-8 ;
+    @apply flex flex-col gap-5 lg:flex-row lg:gap-8 lg:items-center ;
   }
   .hidden-links {
     @apply flex flex-col gap-2  bg-slate-700 text-white rounded-xl w-full py-3 ;
   }
   .links-hover {
-    @apply hover:bg-slate-400 transition-all  w-full block  text-center;
+    @apply font-sans font-semibold hover:bg-slate-400/60 transition-all  w-full block  text-center hover:text-sky-500;
   }
   .nav-btn {
     @apply bg-frozen text-black py-3 px-8 rounded-[30px] ;
