@@ -8,6 +8,7 @@
 
 @theme {
   --color-frozen: rgb(103, 239, 254);
+  --color-nightblue:rgba(25, 25, 112, 1);
   --font-museo: 'museo sans'
 }
 
@@ -41,7 +42,7 @@
   }
 
   .bg-image {
-    background-image: linear-gradient(rgba(25, 25, 112, .9), rgba(25, 25, 112, .9)), url("./assets/parrot_imgs/parrot_langing.jpg");
+    background-image: linear-gradient(rgba(25, 25, 112, .6) 0%, rgba(25, 25, 112 ,1) 50%), url("./assets/parrot_imgs/parrot_langing.jpg");
     background-position: top center;
     @apply bg-no-repeat ;
   }
