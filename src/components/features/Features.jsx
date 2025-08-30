@@ -53,14 +53,14 @@ export default function Features() {
 
 function FeatureCard({ feature }) {
     return (
-        <div className='bg-blue-950 rounded-lg flex flex-col items-start gap-6 text-white my-5 p-3 shadow '>
-            <div className="logo bg-white rounded-md text-blue-950 p-2 ">
+        <div className=' group bg-blue-950 rounded-lg flex flex-col items-start gap-6 text-white my-5 p-3 shadow transition-colors hover:bg-frozen hover:text-black duration-700 '>
+            <div className="logo bg-white rounded-md text-blue-950 p-2 group-hover:bg-blue-950 group-hover:text-white transition-colors duration-700 ">
                 {feature.logo}
             </div>
-            <div className="title">
+            <div className="title font-bold text-lg">
                 <h4>{feature.title}</h4>
             </div>
-            <div className="texts">
+            <div className="texts text-gray-400 group-hover:text-black transition-colors duration-700">
                 {feature.texts}
             </div>
         </div>
